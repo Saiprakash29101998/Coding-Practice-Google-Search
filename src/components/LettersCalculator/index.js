@@ -26,23 +26,26 @@ class LettersCalculator extends Component {
         <div className="container">
           <h1 className="heading">Calculate the Letters you enter</h1>
           <div className="input-container">
-            <p className="input-heading">Enter the Phrase</p>
+            <label className="input-heading" htmlFor="input">
+              Enter the Phrase
+            </label>
             <input
+              id="input"
               className="input"
-              placeholder="Enter the Phrase"
+              placeholder="Enter the phrase"
               onChange={this.onChangePhrase}
               value={phrase}
             />
           </div>
-          <button
+          <p
             type="button"
             className="button"
             onClick={this.reset}
-          >{`No. of letters: ${phrase.length}`}</button>
+          >{`No. of letters: ${phrase.length}`}</p>
         </div>
         <img
           src="https://assets.ccbp.in/frontend/react-js/stop-watch-with-calculator-img.png"
-          alt="calculator"
+          alt="letters calculator"
           className="image"
         />
       </div>
